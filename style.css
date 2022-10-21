@@ -386,7 +386,7 @@ footer .container #area-icons-footer img{
     /* Sessão 6 */
 
     main #s6 .container{
-        width: 100%;
+        width: 90%;
         grid-template-areas: 
         "title title"
         "desc desc"
