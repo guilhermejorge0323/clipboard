@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+html{
+    overflow-x: hidden;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Bai Jamjuree;
+}
+
+body{
+    font-size: 18px;
+}
+
+.container{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,h2{   
+    text-align: center;
+    margin-top: 65px;
+    color: #666;
+    font-size: clamp(1em, 1.8em , 3em);
+}
+
+p{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #aaa;
+   
+}
+
+.container > button{
+    border-radius: 50px;
+    width: 1fr;
+    padding: 5% 0;
+    margin: 10% 7% 0 7%;
+    border: none;
+    color: #fff;
+    font-size: clamp(1em, 1.3em, 1.5em);
+    transition: all 0.2s ease-in-out;
+}
+
+.container #btn1{
+    background-color: rgb(93, 204, 187);
+    border-bottom: 4px solid #51b7a9;
+}
+
+.container #btn1:hover{
+    box-shadow: 0 3px 28px -3px rgba(93, 204, 187,0.9);
+    cursor: pointer;
+}
+
+.container #btn2{
+    background-color: rgb(136, 150, 255);
+    border-bottom: 4px solid #7888ea;
+}
+
+.container #btn2:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 28px -3px rgba(136, 150, 255, 0.9);
+}
+
+
+/* header */
+
+header{
+    width: 100vw;
+    height: auto;
+    background-image: url("images/bg-header-desktop.png");
+    background-color: rgba(255, 255, 255, 1);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding-top: 80px;
+}
+
+header .container{
+    display: grid;
+    grid-template-areas:
+    "logo logo"
+    "title title"
+    "desc desc"
+    "btn1 btn2";
+}
+
+.logo{
+    grid-area: logo;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+header .container > h1{
+    grid-area: title;
+}
+
+header .container > p{
+    grid-area: desc;
+}
+
+header .container   #btn1{
+    grid-area: btn1;
+}
+
+header .container  #btn2{
+    grid-area: btn2;
+}
+
+/* main */
+
+main{
+    margin-top: 85px;
+}
+
+main section{
+    margin-top: 70px;
+}
+
+/* Sessão 2 */ 
+
+main  #s2 > .container{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "Img txt-s2"
+    "Img txt-s2"
+    "Img txt-s2";   
+    align-items: start;
+    height: 80vh;
+}
+
+main #s2 > .container > img{
+    grid-area: Img;
+    position: absolute;
+    left: -45px;
+}
+
+main #s2 .container #txt-s2{
+    width: 25%;
+    grid-area: txt-s2;
+    position: absolute;
+    right: 20%;
+}
+
+
+main #s2 > .container #txt-s2 h2,
+main #s2 > .container #txt-s2 p{
+    text-align: start;
+}
+
+
+/* Sessão 3 */
+
+main #s3{
+    margin-top: 170px;
+}
+
+main #s3 .container p{
+    margin-bottom: 70px;
+}
+
+main #s3 .container img{
+    grid-area: img;
+}
+
+/* Sessão 4 */
+
+main #s4 .container{
+    width: 70%;
+}
+
+main #s4 .container #area-cards-s4{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+main #s4 .container #area-cards-s4 > div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main #s4 .container #area-cards-s4 > div > #txt-card-s4 h1{
+    font-size: clamp(1em,1.2em,2em);
+    margin-top: 30px;
+}
+
+/* Sessão 5 */
+
+main #s5{
+    margin-top: 140px;
+}
+
+main #s5 .container{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+}
+
+
+/* Sessão 6 */
+
+main #s6{
+    margin: 140px 0;
+}
+
+main #s6 .container{
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "desc desc"
+    "b1 b2";
+}
+
+main #s6 .container h1{
+    grid-area: title;
+}
+
+main #s6 .container p{
+    grid-area: desc;
+}
+
+main #s6 .container #btn1{
+    grid-area: b1;
+}
+
+main #s6 .container #btn2{
+    grid-area: b2;
+}
+
+/* Footer */
+
+footer{
+    width: 100vw;
+    background-color: #eee;
+    padding: 25px 0;
+}
+
+footer .container{
+    width: 80%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+footer .container .logo{
+    width: 55px;
+    height: 55px;
+    margin: 0 0;
+}
+
+footer .container #area-link-footer{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15%
+}
+
+footer .container #area-link-footer a{
+    text-decoration: none;
+    padding: 7px 15px;
+    color: #aaa;
+    transition: color 0.4s ease-in-out;
+}
+
+footer .container #area-link-footer a:hover{
+    color: rgb(93, 204, 187);
+}
+
+footer .container #area-icons-footer{
+    margin-left: 25%;
+    display: flex;
+}
+
+footer .container #area-icons-footer img{
+    padding: 0 10px;
+}
+
+
+
+
+@media (max-width: 1280px) {
+
+    .container{
+        width: 80%;
+    }
+
+    header{
+        background-image: url('images/bg-header-mobile.png');
+    }
+
+    header .container{
+        grid-template-areas:
+        "logo logo"
+        "title title"
+        "desc desc"
+        "btn1 btn1"
+        "btn2 btn2";
+    }
+
+    #btn1{
+        margin-top: 50px;
+    }
+
+    header .container > button{
+        margin: 25px 0 0 0;
+        padding: 4%;
+    }
+
+    /* Main */
+
+    main  #s2 > .container{
+        width: 80%;
+        
+        grid-template-areas: 
+        "Img Img"
+        "txt-s2 txt-s2";   
+        align-items: start;
+    }
+
+    main #s2 > .container img{
+        position: static;
+        width: 100%;
+    }
+
+    main #s2 .container  #txt-s2{
+        width: 100%;
+        grid-area: txt-s2;
+        position: static;
+    }
+
+    main #s2 > .container #txt-s2 h2,
+    main #s2 > .container #txt-s2 p{
+        text-align: center;
+        display: block;
+    }
+
+
+    /* sessão 3 */
+
+    main #s3{
+        margin-top: 680px;
+    }
+
+    main #s3 .container{
+        width: 90%;
+    }
+
+    main #s3 .container img{
+        width: 100%;
+    }
+
+    /* Sessao 4 */
+
+    main #s4 .container #area-cards-s4{
+        flex-direction: column;
+    }
+
+    main #s4 .container #area-cards-s4 > div{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /* Sessão 5 */
+    main #s5 .container{
+        flex-direction: column;
+    }
+
+    main #s5 .container img{
+        margin: 30px 0;
+    }
+
+    /* Sessão 6 */
+
+    main #s6 .container{
+        width: 100%;
+        grid-template-areas: 
+        "title title"
+        "desc desc"
+        "b1 b1"
+        "b2 b2";
+    }
+
+    main #s6 .container button{
+        margin-top: 20px ;
+    }
+
+    /* footer */
+
+    footer .container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    footer .container #area-link-footer{
+        margin: 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container #area-link-footer a{
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    footer .container #area-icons-footer{
+        margin: 0 0;
+    }
+}
+
+    
+
